@@ -14,7 +14,7 @@ import os
 try:
     con=sqlite3.connect(database='banking.sqlite')
     cur=con.cursor()
-    cur.execute("create a table account(acn integer primary key autoincrement,name text,password text,email text,mob text,bal float,type text,opendate text)")
+    cur.execute("create table account(acn integer primary key autoincrement,name text,password text,email text,mob text,bal float,type text,opendate text)")
     cur.execute("create table txn_history(acn int,txn_amt float,txn_type text,txn_date text,update_bal float)")
     con.commit()
     print("tables created")
